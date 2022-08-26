@@ -20,7 +20,7 @@ const breakPoints = [
     <div>
       <main className={styles.main}>
         <div className={styles.title}>
-          <h2>customer`&apos;`s reviews</h2>
+          <h2>customer&apos;s reviews</h2>
           <div className={styles.underline}></div>
         </div>
       </main>

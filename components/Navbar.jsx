@@ -33,7 +33,7 @@ const Navbar = () => {
       </div>
       <div className={styles.item}>
         <ul className={styles.list}>
-          <Link href='http://localhost:3000/' passHref>
+          <Link href='/' passHref>
             <li className={styles.listItem}>Homepage</li>
           </Link>
           {/*<li className={styles.listItem}>Products</li>*/}
@@ -90,7 +90,7 @@ const Navbar = () => {
             />
             <ul className={styles.smallscreen_links}>
               <li>
-                <Link href='http://localhost:3000/' passHref>
+                <Link href='/' passHref>
                   <li onClick={() => setToggleMenu(false)}>Homepage</li>
                 </Link>
               </li>
