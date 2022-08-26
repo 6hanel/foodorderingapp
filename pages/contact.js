@@ -90,7 +90,6 @@ export default Contact
 
 // Styles
 const StyledContactForm = styled.div`
-  width: 65%;
   form {
    
     input {
