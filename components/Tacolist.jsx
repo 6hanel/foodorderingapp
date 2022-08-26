@@ -7,9 +7,8 @@ const Tacolist = ({tacoList}) => {
     <div className={styles.container}>
       <h1 className={styles.title}>Tacos</h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
-        in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
+        consisting of a small hand-sized, tasty corn- or wheat-based tortilla,
+        topped with a filling tasty tacos for a Mexican-inspired feast!
       </p>
       <div className={styles.wrapper}>
         {tacoList.map((taco) => (

@@ -64,12 +64,9 @@
 
 @media screen and (max-width: 480px) {
     .container {
-        flex-direction: column;
         padding: 20px;
     }
     .table {
-        display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -78,14 +75,9 @@
     }
     .tr {
         display: flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
         margin-bottom: 20px;
-    }
-    .imgContainer {
-        width: 35vw;
-        height: 35vw;
     }
     .name,
     .total {
@@ -97,15 +89,15 @@
         font-size: 22px;
     }
     .price::before {
-        content: "Price: ";
+        content: "Price ";
         font-weight: 500;
     }
     .quantity::before {
-        content: "Quantity: ";
+        content: "Quantity ";
         font-weight: 500;
     }
     .total::before {
-        content: "Total: ";
+        content: "Total ";
         font-weight: 500;
     }
     .wrapper {
@@ -141,4 +133,110 @@
     background-color: white;
     color: teal;
     font-weight: bold;
+}
+
+@media(max-width:1000px) {
+    .imgContainer {
+        width: 50px;
+        height: 50px;
+    }
+    .container {
+        align-items: center;
+        text-align: center;
+        display: column;
+    }
+    .th {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .table {
+        display: flex;
+    }
+    .tr {
+        display: block;
+    }
+    .tr .imgContainer {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .tr .name {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .tr .extras {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .tr .price {
+        display: block;
+        margin-bottom: 7px;
+    }
+    .tr .quantity {
+        display: block;
+        margin-bottom: 7px;
+    }
+    .tr .total {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 768px) {
+    .container {
+        display: block;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        height: 100%;
+    }
+    .th {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .tr .imgContainer {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .tr .name {
+        display: block;
+        margin-bottom: 28px;
+    }
+    .tr .extras {
+        display: block;
+        margin-bottom: 30px;
+    }
+    .tr .price {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .tr .quantity {
+        display: block;
+        margin-bottom: 15px;
+    }
+    .tr .total {
+        display: block;
+        margin-bottom: 15px;
+    }
+}
+
+@media(max-width: 450px) {
+    .tr .imgContainer {
+        margin-left: 130px;
+    }
+    .container {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .table {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media(max-width: 360px) {
+    .tr .imgContainer {
+        margin-left: 110px;
+    }
 }

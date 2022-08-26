@@ -1,0 +1,79 @@
+     @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+     .container {
+         background-color: rgb(247, 237, 237);
+         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+         border-radius: 0.7px;
+         display: grid;
+         align-items: center;
+         text-align: center;
+     }
+     
+     .c {
+         margin: 120px;
+     }
+     
+     .form {
+         font-family: 'Open Sans Condensed', sans-serif;
+         margin: 30px;
+         display: flex;
+         align-items: flex-start;
+         flex-direction: column;
+         font-size: 16px;
+         padding: 20.5px;
+     }
+     
+     .form input {
+         width: 100%;
+         height: 35px;
+         padding: 7px;
+         outline: none;
+         border-radius: 5px;
+         border: 1px solid rgb(220, 220, 220);
+         margin-bottom: 20px;
+         cursor: pointer;
+     }
+     
+     .form textarea {
+         margin-bottom: 20px;
+         width: 100%;
+         height: 100%;
+         padding: 7px;
+         outline: none;
+         border-radius: 5px;
+         border: 1px solid rgb(220, 220, 220);
+         resize: vertical;
+     }
+     
+     .button {
+         background-color: #dd6b48;
+         font-family: 'Open Sans Condensed', sans-serif;
+         cursor: pointer;
+         font-size: large;
+         font-weight: bolder;
+         text-transform: uppercase;
+         text-decoration: none;
+         border: none;
+         border-radius: 5px;
+         width: 120px;
+     }
+     
+     .h3 {
+         font-size: 2.5rem;
+         color: #333;
+         text-transform: uppercase;
+         font-family: 'Open Sans Condensed', sans-serif;
+         font-weight: 800;
+         text-align: center;
+     }
+     
+     .text {
+         color: #666;
+         font-family: 'Open Sans Condensed', sans-serif;
+     }
+     
+     @media(max-width:550px) {
+         .c {
+             margin: 30px;
+         }
+         .container {}
+     }

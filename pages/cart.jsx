@@ -9,7 +9,7 @@ import {
 } from '@paypal/react-paypal-js'
 import axios from 'axios'
 import { useRouter } from 'next/router'
-import { reset } from './redux/cartSlice'
+import { reset } from '../components/redux/cartSlice'
 import OrderDetail from '../components/OrderDetail'
 
 const Cart = () => {
@@ -132,20 +132,21 @@ const Cart = () => {
     <div className={styles.container}>
       <div className={styles.left}>
         <table className={styles.table} border={0}>
-          <tbody>
+          <tbody className={styles.tbody}>
             <tr className={styles.trTitle}>
-              <th style={{ textAlign: 'center' }}>Product</th>
-              <th>Name</th>
-              <th>Extras</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Total</th>
+              <th className={styles.th}>Product</th>
+              <th className={styles.th}>Name</th>
+              <th className={styles.th}>Extras</th>
+              <th className={styles.th}>Price</th>
+              <th className={styles.th}>Quantity</th>
+              <th className={styles.th}>Total</th>
             </tr>
           </tbody>
-          <tbody>
+         
+          <tbody className={styles.tbody}>
             {cart.products.map((product) => (
               <tr className={styles.tr} key={product._id}>
-                <td className={styles.imgContainer}>
+                <td className={styles.imgContainer} >
                   <Image
                     src={product.img}
                     layout='fill'
@@ -161,15 +162,15 @@ const Cart = () => {
                     <span key={extra._id}>{extra.text} | </span>
                   ))}
                 </td>
-                <td>
+                <td className={styles.price}>
                   <span className={styles.price}>
                     RM{product.price.toFixed(2)}
                   </span>
                 </td>
-                <td>
+                <td className={styles.quantity}>
                   <span className={styles.quantity}>{product.quantity}</span>
                 </td>
-                <td>
+                <td className={styles.total}>
                   <span className={styles.total}>
                     RM{(product.price * product.quantity).toFixed(2)}
                   </span>
@@ -219,7 +220,13 @@ const Cart = () => {
           )}
         </div>
       </div>
-      {cash && <OrderDetail total={cart.total} details={details} createOrder={createOrder} />}
+      {cash && (
+        <OrderDetail
+          total={cart.total}
+          details={details}
+          createOrder={createOrder}
+        />
+      )}
     </div>
   )
 }

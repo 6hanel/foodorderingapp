@@ -32,10 +32,12 @@ const Footer = () => {
         <div className={styles.card}>
           <h1 className={styles.title}>WORKING HOURS</h1>
           <p className={styles.text}>
-            Orders can be prepared upon arrangement and scheduling.
-            <br />
-            <br />
-            However, please order/ WhatsApp us at least one day in advance!
+            MONDAY UNTIL FRIDAY
+            <br /> 9:00 – 22:00
+          </p>
+          <p className={styles.text}>
+            SATURDAY - SUNDAY
+            <br /> 12:00 – 24:00
           </p>
         </div>
       </div>

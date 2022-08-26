@@ -3,7 +3,8 @@ import Image from "next/image";
 import { useState } from "react";
 import axios from 'axios'
 import {useDispatch} from "react-redux"
-import {addProduct} from "../redux/cartSlice"
+import { addProduct } from '../../components/redux/cartSlice'
+git
 
 const Product = ({ pizza }) => {
   const [price, setPrice] = useState(pizza.prices[0])

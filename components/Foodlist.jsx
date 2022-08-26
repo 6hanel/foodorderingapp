@@ -7,12 +7,11 @@ const Foodlist = ({foodList}) => {
     <div className={styles.container}>
       <h1 className={styles.title}>Rice Bowls</h1>
       <p className={styles.desc}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut blandit arcu
-        in pretium molestie. Interdum et malesuada fames acme. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit.
+        perfect for weeknight dinners, make-ahead lunches, or anytime
+        you&apos;re craving a healthy, delicious meal!
       </p>
       <div className={styles.wrapper}>
-        {foodList.map((pizza) => ( 
+        {foodList.map((pizza) => (
           <FoodCard key={pizza._id} pizza={pizza} />
         ))}
       </div>

@@ -23,7 +23,9 @@ if (index - status > 1) return styles.undone;
          <table className={styles.table}>
            <tbody>
              <tr className={styles.trTitle}>
-               <th className={styles.tr}>Order ID</th>
+               <th >
+                 Order ID
+               </th>
                <th>Customer</th>
                <th>Phone Numbers</th>
                <th>Order Details</th>
@@ -38,10 +40,10 @@ if (index - status > 1) return styles.undone;
                  <span className={styles.name}>{order.customer}</span>
                </td>
                <td>
-                 <span className={styles.name}>{order.numbers}</span>
+                 <span className={styles.numbers}>{order.numbers}</span>
                </td>
                <td>
-                 <span className={styles.name}>{order.details}</span>
+                 <span className={styles.Details}>{order.details}</span>
                </td>
                <td>
                  <span className={styles.address}>{order.address}</span>

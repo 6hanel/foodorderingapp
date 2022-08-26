@@ -36,9 +36,10 @@ const Navbar = () => {
           <Link href='http://localhost:3000/' passHref>
             <li className={styles.listItem}>Homepage</li>
           </Link>
-
           {/*<li className={styles.listItem}>Products</li>*/}
-          <li className={styles.listItem}>Menu</li>
+          <Link href='/menu' passHref>
+            <li className={styles.listItem}>Menu</li>
+          </Link>
           <Image
             className={styles.logo}
             src='/img/logo2.png'
@@ -46,10 +47,16 @@ const Navbar = () => {
             width='350px'
             height='120px'
           />
-          <li className={styles.listItem}>Reviews</li>
+          <Link href='/review' passHref>
+            <li onClick={() => setToggleMenu(false)}>
+              <li className={styles.listItem}>Review</li>
+            </li>
+          </Link>
           {/*<li className={styles.listItem}>Events</li>
           <li className={styles.listItem}>Blog</li>*/}
-          <li className={styles.listItem}>Contact</li>
+          <Link href='/contact' passHref>
+            <li className={styles.listItem}>Contact</li>
+          </Link>
         </ul>
       </div>
       <Link href='/cart' passHref>
@@ -88,19 +95,19 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <a href='#menu' onClick={() => setToggleMenu(false)}>
-                  Menu
-                </a>
+                <Link href='/menu' passHref>
+                  <li onClick={() => setToggleMenu(false)}>Menu</li>
+                </Link>
               </li>
               <li>
-                <a href='#Reviews' onClick={() => setToggleMenu(false)}>
-                  Reviews
-                </a>
+                <Link href='/review' passHref>
+                  <li onClick={() => setToggleMenu(false)}>Review</li>
+                </Link>
               </li>
               <li>
-                <a href='#contact' onClick={() => setToggleMenu(false)}>
-                  Contact
-                </a>
+                <Link href='/contact' passHref>
+                  <li onClick={() => setToggleMenu(false)}>Contact</li>
+                </Link>
               </li>
             </ul>
           </div>

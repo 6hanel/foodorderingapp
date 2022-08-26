@@ -67,29 +67,29 @@ const handleDeleteTaco = async (id) => {
         <table className={styles.table}>
           <tbody>
             <tr className={styles.trTitle}>
-              <th>Image</th>
-              <th>Id</th>
-              <th>Title</th>
-              <th>Price</th>
-              <th>Action</th>
+              <th className={styles.th}>Image</th>
+              <th className={styles.th}>Id</th>
+              <th className={styles.th}>Title</th>
+              <th className={styles.th}>Price</th>
+              <th className={styles.th}>Action</th>
             </tr>
           </tbody>
           {pizzaList.map((product) => (
             <tbody key={product._id}>
               <tr className={styles.trTitle}>
-                <td>
+                <td className={styles.td}>
                   <Image
                     src={product.img}
-                    width={50}
-                    height={50}
+                    width={35}
+                    height={35}
                     objectFit='cover'
                     alt=''
                   />
                 </td>
-                <td>{product._id.slice(0, 6)}...</td>
-                <td>{product.title}</td>
-                <td>RM{product.prices[0]}</td>
-                <td>
+                <td className={styles.td}>{product._id.slice(0, 6)}...</td>
+                <td className={styles.td}>{product.title}</td>
+                <td className={styles.td}>RM{product.prices[0]}</td>
+                <td className={styles.td}>
                   <button
                     className={styles.button}
                     onClick={() => handleDelete(product._id)}
@@ -104,7 +104,7 @@ const handleDeleteTaco = async (id) => {
           {tacoList.map((taco) => (
             <tbody key={taco._id}>
               <tr className={styles.trTitle}>
-                <td>
+                <td className={styles.td}>
                   <Image
                     src={taco.img}
                     width={50}
@@ -113,10 +113,10 @@ const handleDeleteTaco = async (id) => {
                     alt=''
                   />
                 </td>
-                <td>{taco._id.slice(0, 6)}...</td>
-                <td>{taco.title}</td>
-                <td>RM{taco.prices[0]}</td>
-                <td>
+                <td className={styles.td}>{taco._id.slice(0, 6)}...</td>
+                <td className={styles.td}>{taco.title}</td>
+                <td className={styles.td}>RM{taco.prices[0]}</td>
+                <td className={styles.td}>
                   <button
                     className={styles.button}
                     onClick={() => handleDeleteTaco(taco._id)}
@@ -135,28 +135,28 @@ const handleDeleteTaco = async (id) => {
         <table className={styles.table}>
           <tbody>
             <tr className={styles.trTitle}>
-              <th>Id</th>
-              <th>Customer</th>
-              <th>Contact</th>
-              <th>Details</th>
-              <th>Total</th>
-              <th>Payment</th>
-              <th>Status</th>
+              <th className={styles.th}>Id</th>
+              <th className={styles.th}>Customer</th>
+              <th className={styles.th}>Contact</th>
+              <th className={styles.th}>Details</th>
+              <th className={styles.th}>Total</th>
+              <th className={styles.th}>Payment</th>
+              <th className={styles.th}>Status</th>
             </tr>
           </tbody>
 
           {orderList.map((order) => (
             <tbody key={order._id}>
               <tr className={styles.trTitle}>
-                <td>{order._id.slice(0, 6)}...</td>
-                <td>{order.customer}</td>
-                <td>{order.numbers}</td>
-                <td>{order.details}</td>
-                <td>RM{order.total.toFixed(2)}</td>
-                <td>
+                <td className={styles.td}>{order._id.slice(0, 6)}...</td>
+                <td className={styles.td}>{order.customer}</td>
+                <td className={styles.td}>{order.numbers}</td>
+                <td className={styles.td}>{order.details}</td>
+                <td className={styles.td}>RM{order.total.toFixed(2)}</td>
+                <td className={styles.td}>
                   {order.method === 0 ? <span>cash</span> : <span>paid</span>}
                 </td>
-                <td>{status[order.status]}</td>
+                <td className={styles.td}>{status[order.status]}</td>
                 <td className={styles.button2}>
                   <button
                     className={styles.next}
